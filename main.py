@@ -21,7 +21,7 @@ class ImageCompressorApp(QMainWindow):
 
         # === Central Widget & Layout ===
         central = QWidget()
-        central.setStyleSheet("background-color: #0d1117;")  # GitHub dark background
+        central.setStyleSheet("background-color: #0d1117;")
         main_layout = QVBoxLayout(central)
         main_layout.setContentsMargins(60, 60, 60, 60)
         main_layout.setSpacing(30)
@@ -41,7 +41,7 @@ class ImageCompressorApp(QMainWindow):
         )
         desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
         desc.setFont(QFont("Segoe UI", 16))
-        desc.setStyleSheet("color: #8b949e;")  # GitHub muted text
+        desc.setStyleSheet("color: #8b949e;") 
         desc.setWordWrap(True)
         main_layout.addWidget(desc)
 
@@ -67,7 +67,7 @@ class ImageCompressorApp(QMainWindow):
         self.image_label = QLabel("No Image Loaded")
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.image_label.setFont(QFont("Segoe UI", 14, QFont.Weight.Medium))
-        self.image_label.setStyleSheet("color: #8b949e;")  # muted placeholder text
+        self.image_label.setStyleSheet("color: #8b949e;")
         self.image_label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         frame_layout.addWidget(self.image_label)
 
