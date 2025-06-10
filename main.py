@@ -13,27 +13,25 @@ from PIL import Image
 class ImageCompressorApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Image Compressor Pro")
+        self.setWindowTitle("Image Compressorer")
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.showFullScreen()
 
         self.current_image_path = None
 
-        # === Central Widget & Layout ===
         central = QWidget()
         central.setStyleSheet("background-color: #0d1117;")
         main_layout = QVBoxLayout(central)
         main_layout.setContentsMargins(60, 60, 60, 60)
         main_layout.setSpacing(30)
 
-        # === Title ===
-        title = QLabel("Image Compressor Pro")
+        title = QLabel("Image Compressorer")
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         title.setFont(QFont("Segoe UI", 32, QFont.Weight.Bold))
-        title.setStyleSheet("color: #c9d1d9;")  # GitHub light text
+        title.setStyleSheet("color: #c9d1d9;") 
         main_layout.addWidget(title)
 
-        # === Description ===
+
         desc = QLabel(
             "• Load or change an image with the button below.\n"
             "• Compress the image and save.\n"
@@ -45,7 +43,6 @@ class ImageCompressorApp(QMainWindow):
         desc.setWordWrap(True)
         main_layout.addWidget(desc)
 
-        # === Image Frame with Drop Shadow ===
         frame = QFrame()
         frame.setStyleSheet(
             """
@@ -73,7 +70,6 @@ class ImageCompressorApp(QMainWindow):
 
         main_layout.addWidget(frame, stretch=1)
 
-        # === Button Bar ===
         btn_bar = QWidget()
         btn_layout = QHBoxLayout(btn_bar)
         btn_layout.setContentsMargins(0, 0, 0, 0)
